@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerala Store | Online Shopping</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Kerala Store</a>
+      <button class="navbar-toggler" type="button" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav-menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="cart.html" class="btn btn-outline-light position-relative me-2">
+          <i class="bi bi-cart"></i> Cart
+          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero container mt-3">
+  <div class="row">
+
+    <div class="col-12">
+      <div class="hero-banner">
+        <img src="https://via.placeholder.com/1200x350?text=Big+Sale+Up+to+50%25+Off" class="img-fluid rounded">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- New Arrivals Section -->
+<section class="container mt-4" id="new-arrivals">
+  <h2 class="mb-3">New Arrivals</h2>
+  <div class="row" id="newArrivalsGrid"></div>
+</section>
+
+
+<!-- ================= CATEGORY BAR ================= -->
+<section class="container mt-4">
+
+  <h5 class="mb-3">Shop by Category</h5>
+
+  <div class="d-flex gap-3 overflow-auto pb-2">
+
+    <div class="category-card" onclick="renderProducts('all')">All</div>
+    <div class="category-card" onclick="renderProducts('mens')">Mens</div>
+    <div class="category-card" onclick="renderProducts('womens')">Womens</div>
+    <div class="category-card" onclick="renderProducts('boys')">Boys</div>
+    <div class="category-card" onclick="renderProducts('girls')">Girls</div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+<section class="container mt-4">
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5>Featured Products</h5>
+    <small class="text-muted">Best deals for you</small>
+  </div>
+
+  <div class="row g-3" id="productGrid">
+
+    <!-- Products will load here via JS -->
+
+  </div>
+
+</section>
+
+
+<!-- ================= TRUST SECTION ================= -->
+<section class="container mt-5">
+
+  <div class="row text-center g-3">
+
+    <div class="col-md-3">
+      <div class="info-box">100% Genuine Products</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box">Easy Return Policy</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box">Fast Delivery</div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box">Secure WhatsApp Order</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer id="site-footer"></footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script src="assets/js/products.js"></script>
+<script type="module" src="assets/js/navbar.js"></script>
+<script type="module" src="assets/js/home.js"></script>
+<script type="module" src="assets/js/footer.js"></script>
+
+
+</body>
+</html>

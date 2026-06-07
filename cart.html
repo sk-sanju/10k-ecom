@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Cart | Kerala Store</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f4f6f9;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* CART CARD */
+    .cart-card {
+      background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin-bottom: 12px;
+    }
+
+    .cart-title {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .price {
+      color: #16a34a;
+      font-weight: bold;
+    }
+
+    /* SUMMARY BOX */
+    .summary-box {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 10px;
+    }
+
+    /* BUTTONS */
+    .btn-buy {
+      background: #16a34a;
+      color: white;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+    }
+
+    .btn-clear {
+      background: #dc2626;
+      color: white;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .qty-box {
+      width: 80px;
+      border-radius: 8px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 50px 0 20px;
+      margin-top: 60px;
+    }
+
+    .footer h5 {
+      color: white;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      margin-top: 20px;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="site-header"></header>
+
+
+<!-- ================= CART SECTION ================= -->
+<div class="container mt-4">
+
+  <div class="row g-4">
+
+    <!-- CART ITEMS -->
+    <div class="col-md-8">
+
+      <h5 class="mb-3">Items in Your Cart</h5>
+
+      <div id="cartItems"></div>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="col-md-4">
+
+      <div class="summary-box">
+
+        <h5>Order Summary</h5>
+
+        <hr>
+
+        <p>Total Items: <span id="totalItems">0</span></p>
+        <p>Total Amount: ₹<span id="totalPrice">0</span></p>
+
+        <button class="btn btn-buy mt-3" onclick="buyCart()">
+          🟢 Buy All on WhatsApp
+        </button>
+
+        <button class="btn btn-clear" onclick="clearCart()">
+          ❌ Clear Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <h5>About</h5>
+        <p>Kerala Traditional Clothing Store from Kuthampully offering premium handloom fashion products.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Policies</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+        <a href="mailto:info@keralastore.com">Email</a>
+        <a href="#">Instagram</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Kerala Store | All Rights Reserved
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="assets/js/cart.js"></script>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function renderCart() {
+  const box = document.getElementById("cartItems");
+  box.innerHTML = "";
+
+  let total = 0;
+
+  cart.forEach((item, i) => {
+    let subtotal = item.price * item.qty;
+    total += subtotal;
+
+    box.innerHTML += `
+      <div class="cart-card row align-items-center">
+
+        <div class="col-md-6">
+          <div class="cart-title">${item.name}</div>
+          <small>Size: ${item.size}</small>
+        </div>
+
+        <div class="col-md-2">
+          <input type="number" min="1"
+            value="${item.qty}"
+            class="form-control qty-box"
+            onchange="updateQty(${i}, this.value)">
+        </div>
+
+        <div class="col-md-2 price">
+          ₹${subtotal}
+        </div>
+
+        <div class="col-md-2 text-end">
+          <button class="btn btn-sm btn-danger" onclick="removeItem(${i})">
+            X
+          </button>
+        </div>
+
+      </div>
+    `;
+  });
+
+  document.getElementById("totalItems").innerText = cart.length;
+  document.getElementById("totalPrice").innerText = total;
+}
+
+function updateQty(index, qty) {
+  cart[index].qty = parseInt(qty);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function clearCart() {
+  cart = [];
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function buyCart() {
+  if (cart.length === 0) return alert("Cart is empty");
+
+  let total = 0;
+  let msg = "🛒 ORDER FROM KERALA STORE\n\n";
+
+  cart.forEach((item, i) => {
+    let subtotal = item.price * item.qty;
+    total += subtotal;
+
+    msg += `${i + 1}. ${item.name}
+Size: ${item.size}
+Qty: ${item.qty}
+Subtotal: ₹${subtotal}\n\n`;
+  });
+
+  msg += `TOTAL: ₹${total}`;
+
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`);
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

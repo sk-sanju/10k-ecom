@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Product | Kerala Store</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f4f6f9;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* PRODUCT CARD */
+    .product-box {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .product-img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #16a34a;
+    }
+
+    .btn-buy {
+      background: #16a34a;
+      color: white;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+    }
+
+    .btn-cart {
+      background: #f59e0b;
+      color: white;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+    }
+
+    .info-box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 50px 0 20px;
+      margin-top: 60px;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      margin-top: 20px;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= PRODUCT SECTION ================= -->
+<div class="container mt-4">
+
+  <div class="row g-4">
+
+    <!-- LEFT: IMAGE -->
+    <div class="col-md-5">
+      <div class="product-box">
+        <img src="https://via.placeholder.com/500x600" class="product-img">
+      </div>
+    </div>
+
+    <!-- RIGHT: DETAILS -->
+    <div class="col-md-7">
+
+      <div class="product-box">
+
+        <h2>Premium Cotton Shirt</h2>
+
+        <p class="text-muted">
+          Kerala Traditional Handloom Collection
+        </p>
+
+        <div class="price">₹499</div>
+
+        <hr>
+
+        <!-- SIZE -->
+        <label class="fw-bold">Select Size</label>
+        <select id="size" class="form-control mb-3">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+
+        <!-- QUANTITY -->
+        <label class="fw-bold">Quantity</label>
+        <input id="qty" type="number" value="1" min="1" class="form-control mb-3">
+
+        <!-- BUTTONS -->
+        <button class="btn btn-buy mb-2" onclick="buyNow(1)">
+          🟢 Buy Now on WhatsApp
+        </button>
+
+        <button class="btn btn-cart" onclick="addToCart(1)">
+          🛒 Add to Cart
+        </button>
+
+        <hr>
+
+        <!-- TRUST INFO -->
+        <div class="info-box">
+          ✔ 100% Quality Checked Product
+        </div>
+
+        <div class="info-box">
+          🔄 Easy Return Available
+        </div>
+
+        <div class="info-box">
+          🚚 Fast Delivery Across Kerala
+        </div>
+
+        <div class="info-box">
+          🧵 Authentic Kuthampully Product
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= DESCRIPTION ================= -->
+<div class="container mt-4">
+
+  <div class="product-box">
+
+    <h4>Product Description</h4>
+
+    <p>
+      This premium cotton shirt is part of our Kerala traditional collection,
+      crafted with comfort and durability in mind. Ideal for daily wear and
+      traditional occasions.
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <h5>About</h5>
+        <p>Kerala Traditional Clothing Store from Kuthampully offering premium handloom fashion products.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Policies</h5>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+        <a href="mailto:info@keralastore.com">Email</a>
+        <a href="#">Instagram</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Kerala Store | All Rights Reserved
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= SCRIPT ================= -->
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

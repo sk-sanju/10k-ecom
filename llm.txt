@@ -1,0 +1,4 @@
+Kerala Traditional Online Store
+E-commerce website for clothing and lifestyle products.
+Pages: Home, Shop, About, Contact, Cart, Policies
+Features: product listing, cart system, category filtering

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Kuthampully Handloom Saree",
+    "category": "womens",
+    "price": 3499,
+    "img": "assets/img/demo1.jpg",
+    "sizeOptions": ["S", "M", "L", "XL"],
+    "rating": 4.5,
+    "description": "Elegant handloom saree with traditional Kerala motifs."
+  },
+  {
+    "id": 2,
+    "name": "Men's Kasavu Mundu",
+    "category": "mens",
+    "price": 2799,
+    "img": "assets/img/demo2.jpg",
+    "sizeOptions": ["M", "L", "XL", "XXL"],
+    "rating": 4.2,
+    "description": "Classic white Kasavu with golden border, perfect for festivals."
+  },
+  {
+    "id": 3,
+    "name": "Kid's Cotton Dhoti",
+    "category": "boys",
+    "price": 1199,
+    "img": "assets/img/demo3.jpg",
+    "sizeOptions": ["S", "M", "L"],
+    "rating": 4.0,
+    "description": "Comfortable cotton dhoti for children, breathable fabric."
+  },
+  {
+    "id": 4,
+    "name": "Girl's Pattu Dress",
+    "category": "girls",
+    "price": 1599,
+    "img": "assets/img/demo4.jpg",
+    "sizeOptions": ["S", "M", "L"],
+    "rating": 4.3,
+    "description": "Vibrant pattu dress with traditional patterns."
+  },
+  {
+    "id": 5,
+    "name": "Men's Handloom Shirt",
+    "category": "mens",
+    "price": 1999,
+    "img": "assets/img/demo5.jpg",
+    "sizeOptions": ["M", "L", "XL"],
+    "rating": 4.1,
+    "description": "Plain handloom shirt suitable for casual wear."
+  },
+  {
+    "id": 6,
+    "name": "Women's Kasavu Top",
+    "category": "womens",
+    "price": 1899,
+    "img": "assets/img/demo6.jpg",
+    "sizeOptions": ["S", "M", "L"],
+    "rating": 4.4,
+    "description": "Elegant top with subtle Kasavu detailing."
+  },
+  {
+    "id": 7,
+    "name": "Kid's Handloom Trousers",
+    "category": "boys",
+    "price": 999,
+    "img": "assets/img/demo7.jpg",
+    "sizeOptions": ["S", "M"],
+    "rating": 3.9,
+    "description": "Soft handloom trousers for boys."
+  },
+  {
+    "id": 8,
+    "name": "Girl's Silk Blouse",
+    "category": "girls",
+    "price": 1299,
+    "img": "assets/img/demo8.jpg",
+    "sizeOptions": ["S", "M"],
+    "rating": 4.2,
+    "description": "Lightweight silk blouse perfect for festivals."
+  },
+  {
+    "id": 9,
+    "name": "Men's Cotton Shirt",
+    "category": "mens",
+    "price": 1499,
+    "img": "assets/img/demo9.jpg",
+    "sizeOptions": ["M", "L", "XL", "XXL"],
+    "rating": 4.0,
+    "description": "Classic cotton shirt with a comfortable fit."
+  },
+  {
+    "id": 10,
+    "name": "Women’s Banarasi Saree",
+    "category": "womens",
+    "price": 4299,
+    "img": "assets/img/demo10.jpg",
+    "sizeOptions": ["S", "M", "L"],
+    "rating": 4.6,
+    "description": "Luxurious Banarasi weave with intricate designs."
+  },
+  {
+    "id": 11,
+    "name": "Kid's Pattu Skirt",
+    "category": "girls",
+    "price": 1199,
+    "img": "assets/img/demo11.jpg",
+    "sizeOptions": ["S", "M"],
+    "rating": 4.1,
+    "description": "Bright pattu skirt for young girls."
+  },
+  {
+    "id": 12,
+    "name": "Men's Silk Dhoti",
+    "category": "mens",
+    "price": 2599,
+    "img": "assets/img/demo12.jpg",
+    "sizeOptions": ["M", "L", "XL"],
+    "rating": 4.3,
+    "description": "Premium silk dhoti for special occasions."
+  }
+]
