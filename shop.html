@@ -1,73 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop | Kerala Traditional Clothing Store</title>
-  <meta name="description" content="Browse premium Kerala handloom clothing. Add to cart and order via WhatsApp.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Kuthampully Heritage</title>
+  <meta name="description" content="Explore our handloom collections, including pure Kerala Kasavu sarees, mens mundu, and pattu pavadas. Fast shipping and order on WhatsApp.">
+  
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <!-- Custom Design System -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
-  <!-- Sticky Navbar -->
+<body class="bg-surface text-on-surface">
+
+  <!-- Header Section -->
   <header id="site-header"></header>
 
-  <!-- Main Content -->
-  <main class="container my-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="mb-0">Shop</h2>
-      <div class="d-flex gap-2 align-items-center">
-        <select id="sortSelect" class="form-select form-select-sm" onchange="productModule.renderProducts()">
-          <option value="default">Sort: Default</option>
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
-          <option value="rating-desc">Rating</option>
-        </select>
-        <a href="cart.html" class="btn btn-outline-primary position-relative">
-          <i class="bi bi-cart"></i> Cart
-          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Filters -->
-    <div class="mb-4">
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="productModule.filterCategory('all')">All</button>
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="productModule.filterCategory('mens')">Mens</button>
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="productModule.filterCategory('womens')">Women</button>
-      <button class="btn btn-outline-secondary btn-sm me-2" onclick="productModule.filterCategory('boys')">Boys</button>
-      <button class="btn btn-outline-secondary btn-sm" onclick="productModule.filterCategory('girls')">Girls</button>
-    </div>
-
-    <!-- Product Grid -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productGrid">
-      <!-- JS injects product cards -->
-    </div>
-
-    <!-- Pagination -->
-    <nav aria-label="Page navigation" class="mt-4">
-      <ul class="pagination justify-content-center" id="pagination"></ul>
+  <main class="container max-w-container-max-width px-3 px-md-4 py-stack-xl">
+    
+    <!-- Breadcrumbs -->
+    <nav class="d-flex align-items-center gap-2 mb-4 text-secondary font-label-md">
+      <a href="index.html" class="text-decoration-none text-secondary hover-text-primary">Home</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <a href="shop.html" class="text-decoration-none text-secondary hover-text-primary">Collection</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <span class="text-primary">Traditional Handloom</span>
     </nav>
+
+    <!-- Page Title -->
+    <h1 class="font-headline-xl text-neutral-dark mb-stack-lg" style="font-size: 2.25rem;">Our Handcrafted Collection</h1>
+
+    <!-- 2-Column Catalog layout -->
+    <div class="row g-stack-lg">
+      
+      <!-- Left Sidebar Filters -->
+      <aside class="col-12 col-lg-3 d-flex flex-column gap-4">
+        
+        <!-- Category Filter -->
+        <div class="bg-white p-4 rounded-3 shadow-sm border" style="border-radius: 12px;">
+          <h3 class="font-label-lg border-bottom pb-2 mb-3">Category</h3>
+          <ul class="list-unstyled d-flex flex-column gap-2 m-0 font-body-md text-secondary">
+            <li>
+              <a href="#" class="text-decoration-none text-secondary hover-text-primary d-flex justify-content-between text-primary fw-bold" data-filter-category="all">
+                <span>All Handlooms</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none text-secondary hover-text-primary d-flex justify-content-between" data-filter-category="womens">
+                <span>Kerala Kasavu Saree</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none text-secondary hover-text-primary d-flex justify-content-between" data-filter-category="mens">
+                <span>Mens Dhoti / Mundu</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none text-secondary hover-text-primary d-flex justify-content-between" data-filter-category="boys">
+                <span>Boys Collection</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none text-secondary hover-text-primary d-flex justify-content-between" data-filter-category="girls">
+                <span>Girls Collection</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Occasion Filter -->
+        <div class="bg-white p-4 rounded-3 shadow-sm border" style="border-radius: 12px;">
+          <h3 class="font-label-lg border-bottom pb-2 mb-3">Occasion</h3>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="px-3 py-2 bg-primary-container text-on-primary-container rounded-pill font-label-md cursor-pointer border" style="font-size: 10px; cursor: pointer;" data-filter-occasion="all">All</span>
+            <span class="px-3 py-2 border rounded-pill font-label-md cursor-pointer hover-border-primary" style="font-size: 10px; cursor: pointer;" data-filter-occasion="wedding">Wedding</span>
+            <span class="px-3 py-2 border rounded-pill font-label-md cursor-pointer hover-border-primary" style="font-size: 10px; cursor: pointer;" data-filter-occasion="festival">Festival</span>
+            <span class="px-3 py-2 border rounded-pill font-label-md cursor-pointer hover-border-primary" style="font-size: 10px; cursor: pointer;" data-filter-occasion="casual">Casual</span>
+            <span class="px-3 py-2 border rounded-pill font-label-md cursor-pointer hover-border-primary" style="font-size: 10px; cursor: pointer;" data-filter-occasion="ceremonial">Ceremonial</span>
+          </div>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="bg-white p-4 rounded-3 shadow-sm border" style="border-radius: 12px;">
+          <h3 class="font-label-lg border-bottom pb-2 mb-3">Price Range</h3>
+          <input type="range" class="form-range w-100" min="500" max="25000" step="500" value="25000" id="priceRange" style="accent-color: var(--color-primary);">
+          <div class="d-flex justify-content-between font-label-md text-secondary mt-2">
+            <span>₹500</span>
+            <span id="priceDisplay">₹25,000+</span>
+          </div>
+        </div>
+
+        <!-- Material Filter -->
+        <div class="bg-white p-4 rounded-3 shadow-sm border" style="border-radius: 12px;">
+          <h3 class="font-label-lg border-bottom pb-2 mb-3">Material</h3>
+          <div class="d-flex flex-column gap-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="matCotton" data-filter-material="cotton" style="accent-color: var(--color-primary);">
+              <label class="form-check-label font-body-sm text-secondary cursor-pointer" for="matCotton">Pure Handloom Cotton</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="matSilk" data-filter-material="silk" style="accent-color: var(--color-primary);">
+              <label class="form-check-label font-body-sm text-secondary cursor-pointer" for="matSilk">Tissue Silk / Blend</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="matZari" data-filter-material="zari" style="accent-color: var(--color-primary);">
+              <label class="form-check-label font-body-sm text-secondary cursor-pointer" for="matZari">Pure Gold Zari</label>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Catalog Grid -->
+      <section class="col-12 col-lg-9">
+        
+        <!-- Grid Header (Count & Sort) -->
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+          <span class="font-body-sm text-secondary" id="productCountText">Showing 1-12 of 64 products</span>
+          <div class="d-flex align-items-center gap-3">
+            <select class="border-0 bg-transparent font-label-lg text-secondary" id="sortSelect" style="outline: none; cursor: pointer;">
+              <option value="newest">Newest Arrivals</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="best-seller">Best Seller</option>
+            </select>
+            <div class="d-none d-md-flex gap-1" style="font-size: 18px;">
+              <i class="fa-solid fa-grid-2 text-primary" style="cursor: pointer;"></i>
+              <i class="fa-solid fa-list-ul text-muted" style="cursor: pointer; opacity: 0.5;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid Row -->
+        <div class="row g-3 g-md-4" id="productGrid">
+          <!-- Spinner placeholder -->
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading products...</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Navigation -->
+        <nav aria-label="Page navigation" class="mt-stack-xl">
+          <ul class="pagination justify-content-center align-items-center" id="pagination">
+            <!-- Dynamically populated page list -->
+          </ul>
+        </nav>
+
+      </section>
+
+    </div>
+
   </main>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer id="site-footer"></footer>
 
-  <!-- Floating WhatsApp button -->
-  <a href="#" id="whatsapp-float" class="whatsapp-float">
-    <img src="assets/img/whatsapp-icon.svg" alt="WhatsApp" />
+  <!-- Floating WhatsApp Action -->
+  <a class="whatsapp-float" href="https://wa.me/919847012345" target="_blank" title="Order via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="module" src="assets/js/utils.js"></script>
-  <script type="module" src="assets/js/product.js"></script>
-  <script type="module" src="assets/js/cart.js"></script>
-  <script type="module" src="assets/js/whatsapp.js"></script>
-  <script type="module" src="assets/js/navbar.js"></script>
+  <script src="assets/js/utils.js" type="module"></script>
+  <script src="assets/js/navbar.js" type="module"></script>
+  <script src="assets/js/cart.js" type="module"></script>
+  <script src="assets/js/product.js" type="module"></script>
+  <script src="assets/js/footer.js" type="module"></script>
+
 </body>
 </html>

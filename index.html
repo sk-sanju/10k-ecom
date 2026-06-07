@@ -1,131 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kerala Store | Online Shopping</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuthampully Heritage | Kerala Traditional Clothing Store</title>
+  <meta name="description" content="Preserving the legendary handloom weaves of Kuthampully. Browse custom Kasavu sarees, mens double mundus, and kids clothing. Handcrafted in Kerala.">
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
   <!-- Custom CSS -->
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-surface text-on-surface">
 
-<header id="site-header">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Kerala Store</a>
-      <button class="navbar-toggler" type="button" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav-menu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-        <a href="cart.html" class="btn btn-outline-light position-relative me-2">
-          <i class="bi bi-cart"></i> Cart
-          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+  <!-- Header Section -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Hero Slider Section -->
+    <section class="position-relative w-100 overflow-hidden bg-white" style="height: 750px;">
+      <div class="position-absolute inset-0 w-100 h-100">
+        <img class="w-100 h-100 object-fit-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBvKurxlnbWEDsIwsxWLEI-RNoiFPtZT6j3t3NCtAoqNnWrbEjLxu60lUF9E2tqOL_6G7ipjeH2LdlYQRAuYJZ4W1CLlVywN2MFTpD0jC1isV8Av8gFWKsE3qf_fn-gxUL43wlqJGCX5lqs1jgpG0deYiPaT48ZTB1XygaP2Bgn6x-ATCWuykznkgYusZwG37UAkxXME0viiTPf8hsImbUkcSvwZGNX5G3PnXIcA1xWK2qUgkXXd4YHaGceyn3R70lSD7QJGRMDna4" alt="Kerala Kasavu Handloom Model Saree">
+        <div class="position-absolute top-0 start-0 w-100 h-100 hero-gradient"></div>
+      </div>
+      
+      <div class="position-relative z-1 d-flex align-items-center h-100 container max-w-container-max-width px-3 px-md-4">
+        <div class="text-start">
+          <span class="font-label-lg text-primary tracking-widest d-block mb-2">SINCE 1924</span>
+          <h1 class="font-display-lg text-neutral-dark mb-3" style="font-size: 4rem;">The Golden Thread of <br><span class="fst-italic text-primary">Kuthampully</span></h1>
+          <p class="font-body-lg text-secondary mb-4 max-w-lg" style="max-width: 500px;">Experience the legacy of Kerala's finest handlooms. Each weave tells a story of thousand-year-old tradition and meticulous craftsmanship.</p>
+          <div class="d-flex gap-3">
+            <a href="shop.html" class="btn btn-primary-luxe py-3 px-4">Shop The Collection</a>
+            <a href="about.html" class="btn btn-secondary-luxe py-3 px-4">Our Heritage</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slider indicators -->
+      <div class="position-absolute bottom-0 end-0 mb-4 me-5 d-flex gap-2">
+        <span class="carousel-indicator-dot active"></span>
+        <span class="carousel-indicator-dot"></span>
+        <span class="carousel-indicator-dot"></span>
+      </div>
+    </section>
+
+    <!-- Bento Curated Grid -->
+    <section class="py-stack-xl container max-w-container-max-width px-3 px-md-4">
+      <div class="text-center mb-5">
+        <h2 class="font-display-lg text-neutral-dark mb-1" style="font-size: 2.5rem;">Curated Collections</h2>
+        <div class="mx-auto bg-primary-gold" style="width: 80px; height: 3px; border-radius: 2px;"></div>
+      </div>
+      
+      <!-- Bento Columns -->
+      <div class="row g-4 bento-grid-container" style="height: 750px;">
+        <!-- Womens (2x2 Span) -->
+        <div class="col-12 col-md-6 h-100">
+          <div class="position-relative w-100 h-100 rounded-3 overflow-hidden group shadow-sm" style="cursor: pointer;" onclick="window.location.href='shop.html?category=womens'">
+            <img class="w-100 h-100 object-fit-cover bento-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ_fjBgBD5i0MtVBM-uZWAC7ay2AVTcylgADDsJSKIED93xr06JkscOAAMDLVoVCbSdzFX-KsBeAebtVp8bqh8x_u_O1W7fCDEnm6sDZRjcNCB_y-B99tuZl_MdlfmzkcscDDS7J3nKydfxpDU7-ISrPvfVdylTnjBksseHtmdXHkPQ_VITqqmqeqmdHZKc77cgigjBrbFALnYbOtXl3t6h0op2930aKKrIGE-j0fxO63tu7Xg9VdvF_3GTR_m5Lx16fZRAKQRP2C4" alt="Womens Kerala Saree">
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);"></div>
+            <div class="position-absolute bottom-0 start-0 p-4 text-white">
+              <span class="font-label-md text-white-50 d-block mb-1">Elegant Heritage</span>
+              <h3 class="font-display-lg text-white m-0" style="font-size: 2.25rem;">Womens</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Bento Rows -->
+        <div class="col-12 col-md-6 h-100 d-flex flex-column gap-4">
+          <!-- Mens (2x1 Span) -->
+          <div class="position-relative w-100 overflow-hidden rounded-3 group shadow-sm" style="flex: 1; cursor: pointer;" onclick="window.location.href='shop.html?category=mens'">
+            <img class="w-100 h-100 object-fit-cover bento-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz6bYqL4mtYo7ZEOZYvW76zvsoNSazkv0xvoUUL4oo2UOQVUATJm49t0pHp3IuOOcuGA1g2ayu_O_TOkD-6reUW8ikhvBy7Z8montWtAt0Bf8BMXr96AsivX1kdCF6qGgol10FvOb87oJB8e79p8aaUmts2P08B2YGXxxZixjcQNimXQoEdG-VDiP6IkSwIhyUgrjUcpBs61kw-r74-dgJ9JxVfYZZbTyDWDivBz1KIqDqqgriO18vWmw1FeMp3RBILJiGwD9_mkb2" alt="Mens Kasavu Mundu & Shirts">
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);"></div>
+            <div class="position-absolute bottom-0 start-0 p-4 text-white">
+              <span class="font-label-md text-white-50 d-block mb-1">Refined Classics</span>
+              <h3 class="font-headline-xl text-white m-0">Mens</h3>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Boys and Girls (1x1 Spans) -->
+          <div class="d-flex gap-4 w-100" style="flex: 1;">
+            <!-- Boys -->
+            <div class="position-relative overflow-hidden rounded-3 group shadow-sm flex-fill" style="width: 50%; cursor: pointer;" onclick="window.location.href='shop.html?category=boys'">
+              <img class="w-100 h-100 object-fit-cover bento-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpPTNLmcG93P_jKx2dkm4r5FnrCeqyxB3XperzsNqx_CzfbYI7f7Tao-EJna13Ljku4m0_wte6pGqzG2_rIXJsEhVz1PakzqN-ADLl6-Ijd9SfzsbRRbWz4Cd4E6HjiPfbwdcylwH6lIbcJLFTB1xgKv4eDyllAJb6VLxHQK90kWVsPJxRG9_BBWwvBsFYakjbsZS2wVjqv51FTE5L_3PRRIObIjEz0J5DlkIyjTE5RC4pzqkimm3Q6hBMlcDq7gSuZ67zjfjrzIX6" alt="Boys Kerala Dhoti">
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);"></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="font-headline-lg text-white m-0">Boys</h3>
+              </div>
+            </div>
+
+            <!-- Girls -->
+            <div class="position-relative overflow-hidden rounded-3 group shadow-sm flex-fill" style="width: 50%; cursor: pointer;" onclick="window.location.href='shop.html?category=girls'">
+              <img class="w-100 h-100 object-fit-cover bento-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvQCdT5qnkI1Sd2C2nDBjY2Gtj29qID9BeRTVWTor7vJt-WIfX6YpjWG-5QFSuVelABeNYuP89QPjjpyKswdjFWimyQ8E6-_dzoFe8mCF0jkYmVDy50NeEx-Hlem18vtxzdcC4Usn7j5yiwGCaMz4o4YA4g2cV9iAO2EiL_2qEzGbgbW9ffWx_kXlyIrgkUBYsXh-IsiVdUDM0fJqb047t42wMmteJvHB6s3L8EXVutqRFHR8OLUdLfp6DtlQEwuon6zseD9JCGMeG" alt="Girls Pattu Pavada Skirt">
+              <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%);"></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="font-headline-lg text-white m-0">Girls</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badge Indicators -->
+    <section class="bg-white py-stack-xl border-top border-bottom">
+      <div class="container max-w-container-max-width px-3 px-md-4">
+        <div class="row g-4 justify-content-center text-center">
+          
+          <!-- Badge 1 -->
+          <div class="col-12 col-md-4 trust-badge-card d-flex flex-column align-items-center">
+            <div class="badge-circle mb-3">
+              <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+            <h4 class="font-headline-lg text-neutral-dark mb-2" style="font-size: 1.35rem;">100% Handwoven</h4>
+            <p class="font-body-sm text-secondary max-w-xs m-0">Authentic pit-loom weaving techniques passed down through generations.</p>
+          </div>
+
+          <!-- Badge 2 -->
+          <div class="col-12 col-md-4 trust-badge-card d-flex flex-column align-items-center">
+            <div class="badge-circle mb-3">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h4 class="font-headline-lg text-neutral-dark mb-2" style="font-size: 1.35rem;">GI Tagged Heritage</h4>
+            <p class="font-body-sm text-secondary max-w-xs m-0">Certified Kuthampully handloom, ensuring genuine origin and quality.</p>
+          </div>
+
+          <!-- Badge 3 -->
+          <div class="col-12 col-md-4 trust-badge-card d-flex flex-column align-items-center">
+            <div class="badge-circle mb-3">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h4 class="font-headline-lg text-neutral-dark mb-2" style="font-size: 1.35rem;">Global Shipping</h4>
+            <p class="font-body-sm text-secondary max-w-xs m-0">Bringing the elegance of Kerala to your doorstep, anywhere in the world.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals / Selected Masterpieces -->
+    <section class="py-stack-xl container max-w-container-max-width px-3 px-md-4">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3 mb-5">
+        <div>
+          <span class="font-label-lg text-primary d-block mb-1">Selected Masterpieces</span>
+          <h2 class="font-display-lg text-neutral-dark m-0" style="font-size: 2.5rem;">New Arrivals</h2>
+        </div>
+        <a class="font-label-lg text-secondary text-decoration-none hover-text-primary d-inline-flex align-items-center gap-2" href="shop.html">
+          View All Collection <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
-    </div>
-  </nav>
-</header>
 
-
-<!-- ================= HERO SECTION ================= -->
-<section class="hero container mt-3">
-  <div class="row">
-
-    <div class="col-12">
-      <div class="hero-banner">
-        <img src="https://via.placeholder.com/1200x350?text=Big+Sale+Up+to+50%25+Off" class="img-fluid rounded">
+      <!-- Grid loaded dynamically by JavaScript -->
+      <div class="row g-4" id="newArrivalsGrid">
+        <!-- Spinner placeholder -->
+        <div class="col-12 text-center py-5">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading masterpieces...</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- Testimonials Section -->
+    <section class="bg-white py-stack-xl border-top border-bottom">
+      <div class="container text-center max-w-container-max-width px-3 px-md-4">
+        <i class="fa-solid fa-quote-left text-primary mb-4" style="font-size: 3rem; opacity: 0.25;"></i>
+        <p class="font-display-lg text-neutral-dark italic mx-auto mb-4" style="font-size: 1.75rem; max-width: 800px; line-height: 1.5;">
+          "The quality of the Kasavu saree I received is unparalleled. It truly carries the essence of Kuthampully's heritage. The craftsmanship and the weight of the gold zari are simply stunning."
+        </p>
+        <div class="d-flex align-items-center justify-content-center gap-3">
+          <div class="rounded-circle overflow-hidden bg-light" style="width: 48px; height: 48px;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNthuqFWfgS9V_ybuETt-kpAu8BJcE96yNPzpczAnuA18yZmZka7X07JotACxHVf8zWm0BT7qnqmcpmR_BDkUQ2qEF9ix5wr3gk47Sw6yvDD9ynoNIRe4w3eRdVaj4DE52_IfW6fgzrLrX5K5dOeOHn0Px9qvEOqoRVYBf2NcjvrXa91cZO05HTqPSFpVfleQD4Eqc3AkcShy_jxA4OwqMW2u94ojRhFXSyjls6fW2EX4MDIm-hb0cvFolU8lbMn_bTb4HjRGPPIfi" alt="Priya S. Nair Profile Pic" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="text-start">
+            <p class="font-label-lg text-neutral-dark m-0" style="font-size: 0.875rem;">Priya S. Nair</p>
+            <p class="font-body-sm text-secondary m-0" style="font-size: 0.75rem;">Verified Buyer, Dubai</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- New Arrivals Section -->
-<section class="container mt-4" id="new-arrivals">
-  <h2 class="mb-3">New Arrivals</h2>
-  <div class="row" id="newArrivalsGrid"></div>
-</section>
+    <!-- Social Hashtags / Instagram Wall -->
+    <section class="py-stack-xl container max-w-container-max-width px-3 px-md-4">
+      <div class="text-center mb-5">
+        <h2 class="font-display-lg text-neutral-dark mb-1" style="font-size: 2.25rem;">#KuthampullyHeritage</h2>
+        <p class="font-body-md text-secondary m-0">Join our community of heritage lovers on Instagram</p>
+      </div>
 
+      <div class="row g-2">
+        <!-- 6 columns of images -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-fZkdSMEPkpEF0XBHJzlqTnfL0NJp2xCCIvNDZ2eq3Z2RnGm65gMmNlZuRzz1xPWmdcW-0zwuXtW4eEJLTFs8SJ6F61prz5V6lnE09_fV9TN84gwdDaSjkIj-R3WkEKECKR3Ymw4ifb8ZB8QAcpZyCxDz4yDgpp7m7LF37iilSKBNtmu7mslmuFCho0tkB6AJxGzkqxSwCrcjFamPVYq4WfSqWATPQT-QMZ7E1Ud0BI5V14fLXTfd0xJF_7EEfWK9wrqS09fkS4Ah" class="w-100 h-100 object-fit-cover bento-img" alt="Social Saree drape model">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB17Kzzhy6F_MVBWNRpQ0FSIzPSnPiCqispJPeeXJXx0VeHK8eQ585gBLfySQIH25kDPCbLvdnflcVcA64j9wLReuLIE8dkeCqeChKL6z-TwD8GzNKewm9_pQxK3IqbbFVV4I6LOhQPuUqzFP2WNAczWMTdFIYlek2eH-LvXVngMppWR2J1b6BJCymie5vU3bHdehoo4aKBacFnH5Qg1jMwsuMelAET9Ak4_R5dYs8jHjRW-3PpLcOgjRpZPjnnB3tnFrSUvKiYLRgP" class="w-100 h-100 object-fit-cover bento-img" alt="Social fabric detailing">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHS_isPS2X0Iv138YOwgEu19l_rI9aBmJMvZ18-wCyaE36FUhUwNHUCjMbPqBmIdxzHI6bNmOU9fH7WA4RJC9pWXVf8dd3wLlQvyvSlmkM5Gw9qGu20GNWSBKqUoQnqKIreXsMsHsK1VHF-Ji36qlBkBTuud50OW4o5zDCI-IQEAG44vrv4IR7xd_6cwyO1De2kL2MRUsWuNSPqw_xxAk5s1Hd9oa2U5cnDe3Pyi3r1wbPE-e0iks2haGElHdgAj6i_T3tsgf5hPPM" class="w-100 h-100 object-fit-cover bento-img" alt="Social model traditional mundu">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOFYTvxsI_DHjb0rDshX6IUUBDft3NrK9aC3GEh8dA6VzJ6CVtq9onWZCxvOorEKXXtf9eNgojIwRVyMOuKSUh_ReYJ6IJfWTj8FrF5MNzpWMVGw_4F--Vi0Ql5ivtl5Dk3LmS0lV3tiozCsc45eII-O3nLMqcw4Z8y_IWiCjlmyld2Tgse5-E-rnK0C6DSx_7bb8__4I0Z9zoaq710ntqzM0rf-EZhS6zJI8F-6ExzFBZJn6OsZnWuoeejgxW_Y6ilzZh21SM0Fn4" class="w-100 h-100 object-fit-cover bento-img" alt="Social model gold border saree">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNLZ5ty1QDO8Iak0NFqARgsPkAC__V0pTZiG_cQNIv5K2GpzjYQI4p77B_R1Zuly6M4c18Ys4TeBarFp5LCgz_JFp1hUlZqpFVIu-TaA_PqfbtHKbmZ3m3aJsNgHItSmtFxlYB01ije7BAI6lxhPlfvVTh5P3XXj4JDW2LpkvTtbAHPBp8rSsYxEo0eICTIuvsFLE3oFByLh3WpW7leqNVMNRKSlJZOketUv2ZgbqWcJtklK2kS822XJXIJH3dd6aHvdopEyPrPWlp" class="w-100 h-100 object-fit-cover bento-img" alt="Social festive mood">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="ratio ratio-1x1 rounded-2 overflow-hidden shadow-sm position-relative group" style="cursor: pointer;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnr4oPr-05G6fQ08c5sPSo9ySh94HeIOzOAfQTXDkaf3a4jedFDkHXJu25Bj7Ar5WaVMURI7m88p_rRjafIRBYXLtyG5xYRInPJ_JRQCR0T_VlG8ZDUhDfCEkxpo4wWY_zOUq215Vtm-EXNQNCXnbcTRwYswoKZnV98u7WSBN754mMowRWbEu4ZffBQPEk7VH-eWeKyoJtZMqVnOIQleVRVdq4h3cgZio_gPAIjP_S7j7ZZGl-maIlHMSmoa-QkMCGa4byektHDpoP" class="w-100 h-100 object-fit-cover bento-img" alt="Social weaving process">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-0 group-hover:opacity-25 transition-opacity duration-300"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ================= CATEGORY BAR ================= -->
-<section class="container mt-4">
+    <!-- The Heritage Letter (Newsletter) -->
+    <section class="py-stack-xl container max-w-container-max-width px-3 px-md-4">
+      <div class="bg-dark text-white rounded-4 p-5 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+        <div class="max-w-md text-center text-lg-start">
+          <h2 class="font-display-lg text-white mb-2" style="font-size: 2.25rem;">The Heritage Letter</h2>
+          <p class="font-body-md text-white-50 m-0" style="max-width: 450px;">Subscribe to receive exclusive collection drops and stories from our looms.</p>
+        </div>
+        <form class="d-flex w-100 gap-2 justify-content-lg-end" style="max-width: 500px;" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input class="form-control-luxe bg-white bg-opacity-10 border-white border-opacity-20 text-white rounded-3 w-100 px-4 py-3" placeholder="Your email address" type="email" required>
+          <button type="submit" class="btn btn-primary-luxe py-3 px-4 shrink-0" style="white-space: nowrap;">Subscribe</button>
+        </form>
+      </div>
+    </section>
 
-  <h5 class="mb-3">Shop by Category</h5>
+  </main>
 
-  <div class="d-flex gap-3 overflow-auto pb-2">
+  <!-- Footer Section -->
+  <footer id="site-footer"></footer>
 
-    <div class="category-card" onclick="renderProducts('all')">All</div>
-    <div class="category-card" onclick="renderProducts('mens')">Mens</div>
-    <div class="category-card" onclick="renderProducts('womens')">Womens</div>
-    <div class="category-card" onclick="renderProducts('boys')">Boys</div>
-    <div class="category-card" onclick="renderProducts('girls')">Girls</div>
+  <!-- Floating WhatsApp Action -->
+  <a class="whatsapp-float" href="https://wa.me/919847012345" target="_blank" title="Order via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-  </div>
-
-</section>
-
-
-<!-- ================= PRODUCTS ================= -->
-<section class="container mt-4">
-
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <h5>Featured Products</h5>
-    <small class="text-muted">Best deals for you</small>
-  </div>
-
-  <div class="row g-3" id="productGrid">
-
-    <!-- Products will load here via JS -->
-
-  </div>
-
-</section>
-
-
-<!-- ================= TRUST SECTION ================= -->
-<section class="container mt-5">
-
-  <div class="row text-center g-3">
-
-    <div class="col-md-3">
-      <div class="info-box">100% Genuine Products</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="info-box">Easy Return Policy</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="info-box">Fast Delivery</div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="info-box">Secure WhatsApp Order</div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer id="site-footer"></footer>
-
-
-<!-- ================= SCRIPTS ================= -->
-<script src="assets/js/products.js"></script>
-<script type="module" src="assets/js/navbar.js"></script>
-<script type="module" src="assets/js/home.js"></script>
-<script type="module" src="assets/js/footer.js"></script>
-
+  <!-- Scripts -->
+  <script src="assets/js/utils.js" type="module"></script>
+  <script src="assets/js/navbar.js" type="module"></script>
+  <script src="assets/js/cart.js" type="module"></script>
+  <script src="assets/js/home.js" type="module"></script>
+  <script src="assets/js/footer.js" type="module"></script>
 
 </body>
 </html>

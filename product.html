@@ -1,239 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Product | Kerala Store</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body {
-      background: #f4f6f9;
-      font-family: "Segoe UI", sans-serif;
-    }
-
-    /* PRODUCT CARD */
-    .product-box {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    .product-img {
-      width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      color: #16a34a;
-    }
-
-    .btn-buy {
-      background: #16a34a;
-      color: white;
-      width: 100%;
-      border-radius: 10px;
-      padding: 10px;
-      font-weight: 600;
-    }
-
-    .btn-cart {
-      background: #f59e0b;
-      color: white;
-      width: 100%;
-      border-radius: 10px;
-      padding: 10px;
-      font-weight: 600;
-    }
-
-    .info-box {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 50px 0 20px;
-      margin-top: 60px;
-    }
-
-    .footer a {
-      color: #cbd5e1;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .footer a:hover {
-      color: white;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #334155;
-      margin-top: 20px;
-      padding-top: 15px;
-      text-align: center;
-      font-size: 14px;
-    }
-  </style>
+  <title>Product Details | Kuthampully Heritage</title>
+  <meta name="description" content="View details of our handcrafted heritage cotton and silk handlooms. Hand-loomed with pure gold zari.">
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
+<body class="bg-surface text-on-surface">
 
-<body>
+  <!-- Header Section -->
+  <header id="site-header"></header>
 
-<!-- ================= PRODUCT SECTION ================= -->
-<div class="container mt-4">
+  <main class="container max-w-container-max-width px-3 px-md-4 py-stack-xl">
+    
+    <!-- Breadcrumbs -->
+    <nav class="d-flex align-items-center gap-2 mb-4 text-secondary font-label-md">
+      <a href="index.html" class="text-decoration-none text-secondary hover-text-primary">Home</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <a href="shop.html" class="text-decoration-none text-secondary hover-text-primary" id="breadcrumbCategory">Womens</a>
+      <i class="fa-solid fa-chevron-right" style="font-size: 10px;"></i>
+      <span class="text-primary" id="breadcrumbProduct">Premium Kasavu Saree</span>
+    </nav>
 
-  <div class="row g-4">
+    <!-- Main Detail Row -->
+    <div class="row g-stack-lg mb-5">
+      
+      <!-- Left: Image Gallery (7 Columns) -->
+      <div class="col-12 col-lg-7">
+        <div class="row g-3 flex-column-reverse flex-md-row">
+          
+          <!-- Thumbnails Column -->
+          <div class="col-12 col-md-2">
+            <div class="d-flex flex-row flex-md-column gap-3 overflow-auto scroll-hide" id="thumbnails-container">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
 
-    <!-- LEFT: IMAGE -->
-    <div class="col-md-5">
-      <div class="product-box">
-        <img src="https://via.placeholder.com/500x600" class="product-img">
+          <!-- Main Image Column -->
+          <div class="col-12 col-md-10">
+            <div class="ratio ratio-4x5 rounded-4 overflow-hidden shadow-sm bg-white position-relative group" style="border-radius: 16px;">
+              <img src="" alt="" id="main-product-image" class="w-100 h-100 object-fit-cover transition-transform duration-500" style="object-position: center;">
+              <div class="position-absolute top-0 start-0 m-3">
+                <span class="bg-white bg-opacity-70 text-primary font-label-md px-3 py-2 rounded-pill shadow-sm backdrop-blur-md" style="font-size: 10px;">
+                  Handmade in Kuthampully
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
 
-    <!-- RIGHT: DETAILS -->
-    <div class="col-md-7">
+      <!-- Right: Product Information (5 Columns) -->
+      <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+        
+        <!-- Header details -->
+        <header>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="d-inline-flex align-items-center text-tertiary font-label-md" style="font-size: 10px;">
+              <i class="fa-solid fa-circle-check me-1"></i> In Stock
+            </span>
+            <span class="text-secondary" style="font-size: 12px;">|</span>
+            <span class="text-secondary font-label-md" style="font-size: 10px;" id="product-sku">SKU: KHM-2024-SRI</span>
+          </div>
+          <h1 class="font-display-lg text-neutral-dark mb-2" style="font-size: 2.25rem;" id="product-title">Handwoven Premium Gold Kasavu Saree</h1>
+          <div id="rating-display" class="mb-3"></div>
+          <div class="d-flex align-items-baseline gap-3">
+            <p class="text-primary font-headline-xl m-0" style="font-size: 2rem;" id="product-price">₹12,499.00</p>
+            <p class="text-secondary line-through font-body-md m-0" id="product-original-price">₹15,000.00</p>
+          </div>
+        </header>
 
-      <div class="product-box">
-
-        <h2>Premium Cotton Shirt</h2>
-
-        <p class="text-muted">
-          Kerala Traditional Handloom Collection
-        </p>
-
-        <div class="price">₹499</div>
-
-        <hr>
-
-        <!-- SIZE -->
-        <label class="fw-bold">Select Size</label>
-        <select id="size" class="form-control mb-3">
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-        </select>
-
-        <!-- QUANTITY -->
-        <label class="fw-bold">Quantity</label>
-        <input id="qty" type="number" value="1" min="1" class="form-control mb-3">
-
-        <!-- BUTTONS -->
-        <button class="btn btn-buy mb-2" onclick="buyNow(1)">
-          🟢 Buy Now on WhatsApp
-        </button>
-
-        <button class="btn btn-cart" onclick="addToCart(1)">
-          🛒 Add to Cart
-        </button>
-
-        <hr>
-
-        <!-- TRUST INFO -->
-        <div class="info-box">
-          ✔ 100% Quality Checked Product
+        <!-- Descriptions -->
+        <div class="border-top border-bottom py-3">
+          <p class="font-body-md text-secondary leading-relaxed mb-3" id="product-description">
+            Experience the epitome of Kerala's weaving heritage. This masterpiece is hand-spun by master artisans in Kuthampully using 100% pure organic cotton and 2-gram gold-plated zari. Every thread tells a story of a thousand-year-old tradition.
+          </p>
+          <ul class="list-unstyled d-flex flex-column gap-2 m-0 font-body-sm text-secondary">
+            <li class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-compass-drafting text-primary" style="width: 20px;"></i>
+              <span>Material: 100% Combed Premium Cotton</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-medal text-primary" style="width: 20px;"></i>
+              <span>Zari: Authentic Gold-Plated (2 Grams)</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-hand text-primary" style="width: 20px;"></i>
+              <span>Craft: 100% Manual Handloom Weave</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="info-box">
-          🔄 Easy Return Available
+        <!-- Selectors -->
+        <div class="d-flex flex-column gap-3">
+          <div>
+            <label class="block font-label-md text-secondary mb-2">Select Length / Size</label>
+            <div class="d-flex gap-2" id="sizes-container">
+              <!-- JS Injected Size Buttons -->
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-label-md text-secondary mb-2">Quantity</label>
+            <div class="d-flex align-items-center border rounded-lg bg-white overflow-hidden shadow-sm" style="width: fit-content; border-radius: 8px;">
+              <button class="btn border-0 py-2 px-3 text-secondary hover-bg-light" onclick="window.updateProductQty(-1)">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="px-3 font-label-lg min-w-[40px] text-center" id="qty-display" style="min-width: 45px;">1</span>
+              <button class="btn border-0 py-2 px-3 text-secondary hover-bg-light" onclick="window.updateProductQty(1)">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="info-box">
-          🚚 Fast Delivery Across Kerala
+        <!-- Checkout Buttons -->
+        <div class="d-flex flex-column gap-2">
+          <button class="btn btn-whatsapp-luxe w-100 py-3 font-label-lg d-flex align-items-center justify-content-center gap-2 shadow-sm" id="buy-whatsapp-btn">
+            <i class="fa-brands fa-whatsapp fs-5"></i> BUY NOW VIA WHATSAPP
+          </button>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary-luxe flex-grow-1 py-3" id="add-to-cart-btn">
+              ADD TO BAG
+            </button>
+            <button class="btn btn-secondary-luxe px-3 py-3 d-flex align-items-center justify-content-center" id="fav-btn">
+              <i class="fa-regular fa-heart fs-5"></i>
+            </button>
+          </div>
         </div>
 
-        <div class="info-box">
-          🧵 Authentic Kuthampully Product
+        <!-- Trust badges -->
+        <div class="row g-2 pt-2">
+          <div class="col-6">
+            <div class="p-3 bg-white rounded-3 border text-center shadow-sm" style="border-radius: 12px;">
+              <i class="fa-solid fa-shield-halved text-primary fs-4 mb-2"></i>
+              <p class="font-label-md text-neutral-dark m-0" style="font-size: 10px;">Secure checkout</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 bg-white rounded-3 border text-center shadow-sm" style="border-radius: 12px;">
+              <i class="fa-solid fa-award text-primary fs-4 mb-2"></i>
+              <p class="font-label-md text-neutral-dark m-0" style="font-size: 10px;">Quality Guarantee</p>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</div>
-
-
-<!-- ================= DESCRIPTION ================= -->
-<div class="container mt-4">
-
-  <div class="product-box">
-
-    <h4>Product Description</h4>
-
-    <p>
-      This premium cotton shirt is part of our Kerala traditional collection,
-      crafted with comfort and durability in mind. Ideal for daily wear and
-      traditional occasions.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-md-3">
-        <h5>About</h5>
-        <p>Kerala Traditional Clothing Store from Kuthampully offering premium handloom fashion products.</p>
+    <!-- Craftsmanship Tab section -->
+    <section class="border-top pt-5 mb-5">
+      <h2 class="font-headline-xl text-neutral-dark mb-4" style="font-size: 2rem;">The Craftsmanship</h2>
+      <div class="row g-stack-lg align-items-center">
+        <div class="col-12 col-lg-6 d-flex flex-column gap-3">
+          <p class="font-body-lg text-secondary leading-relaxed">
+            Every Kuthampully Saree is a testament to the skill of the Devanga community of weavers. This specific piece features the 'Thazhampoo' (Screw Pine) border motif, traditionally symbolizing purity and grace. The cotton is mercerized for a silk-like sheen while maintaining the breathable comfort of cotton.
+          </p>
+          <p class="font-body-lg text-secondary leading-relaxed">
+            By choosing this product, you are directly supporting the traditional weaving clusters of Kerala, ensuring that this ancient art form survives for generations to come.
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg" style="border-radius: 20px;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHYXhEClQuX_hOrEWhn7Bp80efBYHcD-DjpjGe6pJQYm2e9FFsbZzOIIWwtf4tGrp0NnzWOq2T56d3Cxy0XM4sqJVnS5A8IjeyYwSn-2SyqTMlH5cTxfGGpqDm4XuwTeFsTTynB3zdtbrQmTgmnrcki76xLIDyuglW3yNjb85BBYBcV0rEoocc-4ujUXFe6gr31TehLYIppatpN5bFoU_1fQDWmVCjzVmXO7DCMWUPoiYuZhTWjAO24NCAvcDdHMcchZS8ZDr-rGLr" alt="Artisan weaving looms" class="w-100 h-100 object-fit-cover">
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="col-md-3">
-        <h5>Quick Links</h5>
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="cart.html">Cart</a>
-        <a href="contact.html">Contact</a>
+    <!-- Related Products -->
+    <section class="border-top pt-5">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h2 class="font-headline-xl text-neutral-dark m-0" style="font-size: 2rem;">You May Also Like</h2>
+          <p class="font-body-sm text-secondary m-0">Curated heritage pieces for your collection</p>
+        </div>
+        <div class="d-none d-md-flex gap-2">
+          <button class="btn btn-secondary-luxe rounded-circle d-flex align-items-center justify-content-center p-0" style="width: 40px; height: 40px;"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="btn btn-secondary-luxe rounded-circle d-flex align-items-center justify-content-center p-0" style="width: 40px; height: 40px;"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
       </div>
-
-      <div class="col-md-3">
-        <h5>Policies</h5>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Shipping Policy</a>
-        <a href="#">Terms</a>
+      
+      <!-- Related products grid -->
+      <div class="row g-3 g-md-4" id="relatedProductsGrid">
+        <!-- Dynamically loaded by JS -->
       </div>
+    </section>
 
-      <div class="col-md-3">
-        <h5>Contact</h5>
-        <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
-        <a href="mailto:info@keralastore.com">Email</a>
-        <a href="#">Instagram</a>
-      </div>
+  </main>
 
-    </div>
+  <!-- Footer Section -->
+  <footer id="site-footer"></footer>
 
-    <div class="footer-bottom">
-      © 2026 Kerala Store | All Rights Reserved
-    </div>
+  <!-- Floating WhatsApp Action -->
+  <a class="whatsapp-float" href="https://wa.me/919847012345" target="_blank" title="Order via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-  </div>
-
-</footer>
-
-
-<!-- ================= SCRIPT ================= -->
-<script src="assets/js/products.js"></script>
-<script src="assets/js/cart.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/utils.js" type="module"></script>
+  <script src="assets/js/navbar.js" type="module"></script>
+  <script src="assets/js/cart.js" type="module"></script>
+  <script src="assets/js/product-details.js" type="module"></script>
+  <script src="assets/js/footer.js" type="module"></script>
 
 </body>
 </html>
