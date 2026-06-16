@@ -61,7 +61,7 @@ function buyNow(id) {
 
   const msg = `Order:\n${p.name}\nPrice: ₹${p.price}`;
 
-  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`);
+  window.open(`https://wa.me/919539251789?text=${encodeURIComponent(msg)}`);
 }
 
 /* SEARCH */

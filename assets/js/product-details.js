@@ -94,7 +94,7 @@ function renderDetails() {
     originalPrice.innerText = `₹${originalVal.toLocaleString('en-IN')}`;
   }
 
-  if (skuText) skuText.innerText = `SKU: KHM-2024-0${currentProduct.id}`;
+  if (skuText) skuText.innerText = `SKU: KSH-2026-0${currentProduct.id}`;
 
   if (ratingText) {
     ratingText.innerHTML = `
