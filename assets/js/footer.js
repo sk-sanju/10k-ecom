@@ -13,7 +13,7 @@ export function initFooter() {
   const isInSubdir = path.includes('/policies/') || path.split('/').slice(-2)[0] === 'policies';
   
   const prefix = isInSubdir ? '../' : '';
-  const policyPrefix = isInSubdir ? '' : 'policies/';
+  const policyPrefix = "policies/";
   const currentYear = new Date().getFullYear();
 
   // Inject footer HTML
