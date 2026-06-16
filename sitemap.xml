@@ -1,7 +1,56 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>index.html</loc></url>
-<url><loc>shop.html</loc></url>
-<url><loc>about.html</loc></url>
-<url><loc>contact.html</loc></url>
-<url><loc>cart.html</loc></url>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Homepage -->
+<url>
+    <loc>https://www.yourdomain.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+</url>
+
+<!-- About -->
+<url>
+    <loc>https://www.yourdomain.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<!-- Contact -->
+<url>
+    <loc>https://www.yourdomain.com/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<!-- Policies -->
+<url>
+    <loc>https://www.yourdomain.com/policies/shipping-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+<url>
+    <loc>https://www.yourdomain.com/policies/return-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+<url>
+    <loc>https://www.yourdomain.com/policies/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+<url>
+    <loc>https://www.yourdomain.com/policies/terms-and-conditions.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+</url>
+
+
 </urlset>
