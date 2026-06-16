@@ -29,6 +29,18 @@
   --container-max-width: 1280px;
 }
 
+.hero-gold-overlay {
+  background:
+  linear-gradient(
+  360deg,
+  rgba(255, 255, 255, 0.9) 0%,
+  rgba(255, 255, 255, 0.7) 35%,
+  rgba(209, 194, 108, 0.25) 70%,
+  transparent 100%
+  );
+  }
+
+
 /* Base resets & styling */
 body {
   background-color: var(--color-bg-base);
@@ -380,6 +392,9 @@ html {
   font-size: 24px;
   transition: background-color 0.3s;
 }
+
+
+
 .trust-badge-card:hover .badge-circle {
   background-color: rgba(115, 92, 0, 0.15);
 }

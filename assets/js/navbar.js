@@ -25,7 +25,7 @@ export function initNavbar() {
       <div class="container d-flex justify-content-between align-items-center max-w-container-max-width px-3 px-md-4">
         
         <!-- Logo -->
-        <a class="navbar-brand m-0" href="${prefix}index.html">Kavish</a>
+        <a class="navbar-brand m-0" href="${prefix}index.html">Kavishloom</a>
 
         <!-- Desktop Navigation Center Links -->
         <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="nav-desktop-menu">

@@ -23,7 +23,7 @@ export function initFooter() {
         
         <!-- Column 1: Brand & Socials -->
         <div class="col-12 col-md-4 col-lg-3">
-          <span class="font-display-lg text-primary d-block mb-3" style="font-size: 1.8rem;">Kavish</span>
+          <span class="font-display-lg text-primary d-block mb-3" style="font-size: 1.8rem;">Kavishloom</span>
           <p class="font-body-sm text-secondary mb-4 leading-relaxed">
             Preserving the legacy of Kerala's handloom weavers since 1924. Every piece is a masterpiece of tradition, crafted with sovereign perfection.
           </p>
@@ -61,12 +61,12 @@ export function initFooter() {
         <div class="col-12 col-lg-3">
           <h5 class="font-label-lg text-neutral-dark mb-4">Visit Us</h5>
           <p class="font-body-sm text-secondary mb-3 leading-relaxed">
-            Main Bazaar, Kavish Village,<br>
+            Kuthampully Theruvu, Kuthampully,<br>
             Thrissur District, Kerala - 680594
           </p>
           <p class="font-body-sm text-secondary m-0 leading-relaxed">
             <strong>Phone:</strong> +91 9744935628<br>
-            <strong>Email:</strong> care@Kavishheritage.com
+            <strong>Email:</strong> kavishloom@gmail.com
           </p>
         </div>
 

@@ -45,3 +45,46 @@ window.onload = () => {
   updateCartCount();
   loadProducts();
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("inquiryForm");
+    const submitBtn = document.getElementById("submitBtn");
+
+    if (!form || !submitBtn) return;
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = form.querySelector('input[type="text"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const phone = form.querySelector('input[type="tel"]').value.trim();
+        const message = form.querySelector("textarea").value.trim();
+
+        if (!name || !email || !phone || !message) {
+            alert("Please fill all fields");
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            from_name: name,
+            from_email: email,
+            phone: phone,
+            message: message
+        })
+        .then(() => {
+            alert("Message sent successfully!");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error(error);
+            alert("Failed to send message");
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Inquiry";
+        });
+    });
+});
