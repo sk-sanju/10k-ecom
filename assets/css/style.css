@@ -15,6 +15,12 @@
   --color-container-high: #eae7e7;     /* Light Grey */
   --color-whatsapp: #25d366;           /* WhatsApp Green */
 
+  /* Override Bootstrap's default blue primary */
+  --bs-primary: #D4AF37;
+  --bs-primary-rgb: 212, 175, 55;
+  --bs-secondary: #5A3E1B;
+  --bs-light: #FFF8E7;
+
   /* Fonts */
   --font-display: 'EB Garamond', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;

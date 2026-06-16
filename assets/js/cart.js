@@ -19,13 +19,16 @@ async function getProductById(id) {
 export function syncCartBadge() {
   const badge = document.getElementById('cartCount');
   if (badge) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = [];
+    try {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      if (!Array.isArray(cart)) cart = [];
+    } catch (e) { cart = []; }
     const totalQty = cart.reduce((sum, item) => sum + parseInt(item.qty || 1), 0);
     badge.innerText = totalQty;
     badge.style.display = totalQty === 0 ? 'none' : 'flex';
   }
 }
-// Duplicate syncCartBadge block removed
 
 // Add item to cart
 export async function addToCart(productId, qty = 1, size = "Standard") {
@@ -33,10 +36,16 @@ export async function addToCart(productId, qty = 1, size = "Standard") {
   const product = await getProductById(productId);
   if (!product) {
     console.error('Product not found for ID', productId);
-    return alert('Product not found');
+    if (window.showToast) window.showToast('Product not found', 'error');
+    else alert('Product not found');
+    return;
   }
 
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let cart = [];
+  try {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    if (!Array.isArray(cart)) cart = [];
+  } catch (e) { cart = []; }
   const existingItemIndex = cart.findIndex(item => item.id === product.id && item.size === size);
   if (existingItemIndex > -1) {
     cart[existingItemIndex].qty = parseInt(cart[existingItemIndex].qty) + parseInt(qty);
@@ -53,19 +62,28 @@ export async function addToCart(productId, qty = 1, size = "Standard") {
   }
   localStorage.setItem('cart', JSON.stringify(cart));
   syncCartBadge();
-  alert(`Added ${qty} x ${product.name} (${size}) to your Shopping Bag!`);
+  
+  if (window.showToast) {
+    window.showToast(`Added ${qty} x ${product.name} (${size}) to your Shopping Bag!`, 'success');
+  } else {
+    alert(`Added ${qty} x ${product.name} (${size}) to your Shopping Bag!`);
+  }
 }
 
 
 // Directly buy a single item via WhatsApp
 export async function buyNow(productId, qty = 1, size = "Standard") {
   const product = await getProductById(productId);
-  if (!product) return alert("Product not found");
+  if (!product) {
+    if (window.showToast) window.showToast('Product not found', 'error');
+    else alert("Product not found");
+    return;
+  }
 
   const subtotal = product.price * qty;
   const whatsappNumber = "919744935628";
   
-  const msg = `🛍️ *NEW INQUIRY - KUTHAMPULLY LUXE*\n\n` +
+  const msg = `🛍️ *NEW INQUIRY - KAVISH*\n\n` +
               `*Product:* ${product.name}\n` +
               `*Size:* ${size}\n` +
               `*Quantity:* ${qty}\n` +
@@ -78,11 +96,19 @@ export async function buyNow(productId, qty = 1, size = "Standard") {
 
 // Checkout the entire cart via WhatsApp
 export function buyCart() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  if (cart.length === 0) return alert("Your Shopping Bag is empty!");
+  let cart = [];
+  try {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    if (!Array.isArray(cart)) cart = [];
+  } catch (e) { cart = []; }
+  if (cart.length === 0) {
+    if (window.showToast) window.showToast('Your Shopping Bag is empty!', 'warning');
+    else alert("Your Shopping Bag is empty!");
+    return;
+  }
 
   let total = 0;
-  let msg = `🛍️ *NEW ORDER - KUTHAMPULLY LUXE*\n\n` +
+  let msg = `🛍️ *NEW ORDER - KAVISH*\n\n` +
             `*Customer Order Details:*\n` +
             `-----------------------------------------\n`;
 
@@ -99,7 +125,7 @@ export function buyCart() {
          `*Total Order Value:* ₹${Number(total).toLocaleString('en-IN')}\n\n` +
          `Please confirm and generate the WhatsApp invoice for my selection. Thank you!`;
 
-  const whatsappNumber = "919847012345";
+  const whatsappNumber = "919744935628";
   window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
@@ -107,4 +133,4 @@ export function buyCart() {
 window.addToCart = addToCart;
 window.buyNow = buyNow;
 window.buyCart = buyCart;
-window.syncCartBadge = syncCartBadge;
+window.syncCartBadge = syncCartBadge;

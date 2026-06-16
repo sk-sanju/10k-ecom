@@ -25,7 +25,7 @@ export function initNavbar() {
       <div class="container d-flex justify-content-between align-items-center max-w-container-max-width px-3 px-md-4">
         
         <!-- Logo -->
-        <a class="navbar-brand m-0" href="${prefix}index.html">Kuthampully Heritage</a>
+        <a class="navbar-brand m-0" href="${prefix}index.html">Kavish</a>
 
         <!-- Desktop Navigation Center Links -->
         <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="nav-desktop-menu">
@@ -64,7 +64,7 @@ export function initNavbar() {
     <!-- Mobile Drawer Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuDrawer">
       <div class="d-flex justify-content-between align-items-center mb-5">
-        <span class="font-display-lg text-primary" style="font-size: 1.8rem;">Kuthampully</span>
+        <span class="font-display-lg text-primary" style="font-size: 1.8rem;">Kavish</span>
         <button class="btn border-0 text-dark p-2" id="mobileMenuCloseBtn" style="font-size: 1.5rem;">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -155,7 +155,11 @@ export function initNavbar() {
 export function updateCartBadge() {
   const badge = document.getElementById('cartCount');
   if (badge) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = [];
+    try {
+      cart = JSON.parse(localStorage.getItem('cart'));
+      if (!Array.isArray(cart)) cart = [];
+    } catch (e) { cart = []; }
     // Count total quantities
     const totalQty = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
     badge.innerText = totalQty;
