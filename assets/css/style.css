@@ -40,7 +40,9 @@
   );
   }
 
-
+.whatsapp-float {
+  text-decoration: none;
+}
 /* Base resets & styling */
 body {
   background-color: var(--color-bg-base);
@@ -114,6 +116,44 @@ body {
 /* Scroll Smoothing */
 html {
   scroll-behavior: smooth;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--scroll-delay, 0s);
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Scale effect variant */
+.scroll-animate[data-effect="scale"] {
+  transform: translateY(30px) scale(0.95);
+}
+
+.scroll-animate[data-effect="scale"].visible {
+  transform: none;
+}
+
+/* Fade left/right variants */
+.scroll-animate[data-effect="fade-left"] {
+  transform: translateX(-30px);
+}
+
+.scroll-animate[data-effect="fade-left"].visible {
+  transform: none;
+}
+
+.scroll-animate[data-effect="fade-right"] {
+  transform: translateX(30px);
+}
+
+.scroll-animate[data-effect="fade-right"].visible {
+  transform: none;
 }
 
 /* Custom elevations and elements */
