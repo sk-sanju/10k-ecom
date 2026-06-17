@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
 
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        emailjs.send("service_75u016v", "template_5qzmsvq", {
             from_name: name,
             from_email: email,
             phone: phone,

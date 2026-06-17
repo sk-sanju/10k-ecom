@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.1,
+  threshold: 0.5,
   rootMargin: '0px 0px -10% 0px' // trigger slightly before element fully enters view
 });
 

@@ -23,7 +23,7 @@ export function initFooter() {
         
         <!-- Column 1: Brand & Socials -->
         <div class="col-12 col-md-4 col-lg-3">
-          <span class="font-display-lg text-primary d-block mb-3" style="font-size: 1.8rem;">Kavishloom</span>
+          <span class="font-display-lg text-primary d-block mb-3" style="font-size: 1.8rem;">Kavish</span>
           <p class="font-body-sm text-secondary mb-4 leading-relaxed">
             Preserving the legacy of Kerala's handloom weavers since 1924. Every piece is a masterpiece of tradition, crafted with sovereign perfection.
           </p>
